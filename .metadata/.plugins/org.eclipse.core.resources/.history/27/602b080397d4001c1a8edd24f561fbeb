@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Auto.h"
+#include "Color.h"
+#include "Fecha.h"
+#include "Marca.h"
+#include "Trabajo.h"
+#include "Servicio.h"
+
+
+char menuPrincipal(){
+
+    char opcion;
+
+    system("cls");
+    printf("     *** Lavadero: MENU DE OPCIONES ***\n\n");
+    printf("A. ALTA AUTO\n");
+    printf("B. MODIFICAR AUTO:\n");
+    printf("C. BAJA AUTO:\n");
+    printf("D. LISTAR AUTOS:\n");
+    printf("E. LISTAR MARCAS\n");
+    printf("F. LISTAR COLORES\n");
+    printf("G. LISTAR SERVICIOS\n");
+    printf("H. ALTA TRABAJO:\n");
+    printf("I. LISTAR TRABAJOS\n");
+    printf("Z. Salir\n\n");
+    printf("Ingrese opcion: ");
+    fflush(stdin);
+    scanf("%c", &opcion);
+    opcion = toupper(opcion);
+
+    return opcion;
+
+}
+

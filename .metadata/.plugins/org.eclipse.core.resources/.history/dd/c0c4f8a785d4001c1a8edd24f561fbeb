@@ -1,0 +1,69 @@
+// Mansilla Claudio Matias - clau.mmatt@gmail.com
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Auto.h"
+#include "Color.h"
+#include "Fecha.h"
+#include "Marca.h"
+#include "Trabajo.h"
+#include "Servicio.h"
+
+#define TAM_AUT 10
+#define TAM_LAV 10
+#define TAM_MAR 5
+#define TAM_COL 5
+#define TAM_SERV 4
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	eMarca marcas[TAM_MAR]={
+			{1000, "Renault"},
+			{1001, "Ford"},
+			{1002, "Fiat"},
+			{1003, "Chevrolet"},
+			{1004, "Peugeot"}
+	};
+
+	eColor colores[TAM_COL]={
+			{5000, "Negro"},
+			{5001, "Blanco"},
+			{5002, "Rojo"},
+			{5003, "Verde"},
+			{5004, "Azul"}
+	};
+
+	eServicio servicios[TAM_SERV]={
+			{20000, "Lavado", 450},
+			{20001, "Pulido", 500},
+			{20002, "Encerado", 600},
+			{20003, "Completo", 900}
+	};
+   // ---- fin datos hardcodeados ----
+
+	int idInicialTrab = 0;
+
+	eAuto hardAutos[TAM_AUT]= {
+			{100, "Lavado", 450},
+			{101, "Pulido", 500},
+			{102, "Encerado", 600},
+			{103, "Completo", 900}
+			{104, "Lavado", 450},
+			{105, "Pulido", 500},
+			{106, "Encerado", 600},
+			{107, "Completo", 900}
+			{108, "Lavado", 450},
+			{109, "Pulido", 500},
+			{110, "Completo", 900}
+	};
+
+	eAuto listaAutos[TAM_AUT];
+	eTrabajo listaTrab[TAM_LAV];
+
+	//testeo auto
+	altaAuto(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+	listarAutos(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+
+	return EXIT_SUCCESS;
+}

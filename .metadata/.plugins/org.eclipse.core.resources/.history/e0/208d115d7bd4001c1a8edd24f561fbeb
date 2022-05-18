@@ -1,0 +1,16 @@
+#ifndef COLOR_H_
+#define COLOR_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "ctype.h"
+
+
+typedef struct{
+
+	int id;
+	char nombreColor[20];
+
+}eColor;
+#endif /* COLOR_H_ */
+

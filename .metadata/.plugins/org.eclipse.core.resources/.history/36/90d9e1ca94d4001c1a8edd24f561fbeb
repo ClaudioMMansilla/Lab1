@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Auto.h"
+#include "Color.h"
+#include "Fecha.h"
+#include "Marca.h"
+#include "Trabajo.h"
+#include "Servicio.h"
+
+
+int menuEmpleados(){
+
+    int opcion;
+
+    system("cls");
+    printf("     *** Lavadero: ABM  Autos - Trabajos ***\n\n");
+    printf("1. Alta empleado\n");
+    printf("2. Baja empleado\n");
+    printf("3. Modificar empleado\n");
+    printf("4. Ordenar empleados\n");
+    printf("5. Listar empleados\n");
+    printf("6. Listar empleadas\n");
+    printf("7. Informe promedio de sueldos\n");
+    printf("8. Informe empleado/os mayores\n");
+    printf("9. Listar Sectores\n");
+    printf("10. Listar empleados de un sector\n");
+    printf("11. Listar empleados de cada sector\n");
+    printf("12. Total sueldos de un sector\n");
+    printf("13. Sector/res que cobra mas\n");
+    printf("14. Empleado y sector mejor sueldo\n");
+    printf("15. Sector mas mujeres\n");
+    printf("16. Total varones de un sector\n");
+    printf("17. Sexo empleado menor\n");
+    printf("18. Listar Comidas\n");
+    printf("19. Alta Almuerzo\n");
+    printf("20. Listar Almuerzos\n");
+    printf("21. Total a pagar empleado\n");
+    printf("30. Salir\n");
+    printf("Ingrese opcion: ");
+    fflush(stdin);
+    scanf("%d", &opcion);
+
+    return opcion;
+
+}

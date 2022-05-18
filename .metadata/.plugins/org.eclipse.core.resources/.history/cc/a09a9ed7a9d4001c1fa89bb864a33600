@@ -1,0 +1,34 @@
+#ifndef AUTO_H_
+#define AUTO_H_
+
+#include "Auto.h"
+#include "Color.h"
+#include "Fecha.h"
+#include "Marca.h"
+#include "Servicio.h"
+#include "Trabajo.h"
+
+typedef struct{
+	char id[8];
+	int idMarca;
+	int idColor;
+	char caja;
+	int isEmpty;
+}eAuto;
+
+#endif /* AUTO_H_ */
+
+
+int ordenarAutosMarcaCaja(eAuto vec[], int tam);
+
+int inicializarAutos(eAuto vec[], int tam);
+
+void mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC);
+
+int listarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+
+int buscarIndiceLibreAuto(eAuto autos[], int tam, int* pIndice);
+
+int altaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+
+
