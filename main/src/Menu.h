@@ -6,5 +6,8 @@
 
 #endif /* MENU_H_ */
 
-int menuModifAuto();
 char menuPrincipal();
+
+int menuModifAuto();
+
+int menuModifTrabajo();

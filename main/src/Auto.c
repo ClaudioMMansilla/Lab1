@@ -96,7 +96,10 @@ int listarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor color
         {
             printf(" No hay vehiculos registrados en el sistema\n");
         }
+
+        printf("__________________________________________________\n\n");
     	control = 1;
+//    	system("pause");
     }
     return control;
 }
@@ -119,6 +122,41 @@ int buscarIndiceLibreAuto(eAuto autos[], int tam, int* pIndice){
         control = 1;
     }
     return control;
+}
+
+
+
+int buscarAuto(eAuto vec[], int tam, char id[], int* pIndice){
+
+    int control = 0;
+
+    if( vec != NULL && pIndice != NULL && tam > 0 )
+    {
+        *pIndice = -1;
+        for(int i=0; i < tam; i++)
+        {
+            if(!vec[i].isEmpty && strcmp(vec[i].id, id) == 0)
+            {
+                *pIndice = i;
+                control = 1;
+                break;
+            }
+        }
+    }
+    return control;
+}
+
+
+int validarAuto(eAuto vec[], int tam, char id[]){
+	int validacion = 0;
+	int indice;
+
+	if (buscarAuto(vec, tam, id, &indice) ){
+		if(indice != -1){
+			validacion = 1;
+		}
+	}
+	return validacion;
 }
 
 
@@ -181,45 +219,11 @@ int altaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[
             //(*pProximoId)++;
             control = 1;
 
-            printf("Alta de vehiculo realizada correctamente \n\n");
+            printf("\nAlta de vehiculo realizada correctamente \n\n");
             system("pause");
         }
     }
     return control;
-}
-
-
-int buscarAuto(eAuto vec[], int tam, char id[], int* pIndice){
-
-    int control = 0;
-
-    if( vec != NULL && pIndice != NULL && tam > 0 )
-    {
-        *pIndice = -1;
-        for(int i=0; i < tam; i++)
-        {
-            if(!vec[i].isEmpty && strcmp(vec[i].id, id) == 0)
-            {
-                *pIndice = i;
-                control = 1;
-                break;
-            }
-        }
-    }
-    return control;
-}
-
-
-int validarAuto(eAuto vec[], int tam, char id[]){
-	int validacion = 0;
-	int indice;
-
-	if (buscarAuto(vec, tam, id, &indice) ){
-		if(indice != -1){
-			validacion = 1;
-		}
-	}
-	return validacion;
 }
 
 
@@ -300,6 +304,8 @@ int modificarAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor col
         {
         	printf("Se ha producido un error, reintente nuevamente \n");
         }
+
+        system("pause");
     }
     return control;
 }
@@ -353,7 +359,10 @@ int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[
         {
         	printf("Se ha producido un error, reintente nuevamente \n");
         }
+
+        system("pause");
     }
     return control;
 }
+
 

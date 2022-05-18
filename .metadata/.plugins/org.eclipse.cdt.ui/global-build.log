@@ -6287,3 +6287,1839 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
 gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
 Info: Nothing to build for main
+23:02:55 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:100:25: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+  100 |                         listarServicios(servicios, TAM_SERV);
+      |                         ^~~~~~~~~~~~~~~
+..\src\main.c:52:13: warning: unused variable 'idInicialTrab' [-Wunused-variable]
+   52 |         int idInicialTrab = 0;
+      |             ^~~~~~~~~~~~~
+..\src\main.c:49:18: warning: unused variable 'listaTrab' [-Wunused-variable]
+   49 |         eTrabajo listaTrab[TAM_LAV];
+      |                  ^~~~~~~~~
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+23:04:01 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+12:53:18 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+..\src\Servicio.c: In function 'mostrarServicio':
+..\src\Servicio.c:44:40: warning: unknown conversion type character '$' in format [-Wformat=]
+   44 |         printf("|%-10d      %10s      %$3.2f|\n", servicio.id, servicio.descripcion, servicio.precio);
+      |                                        ^
+..\src\Servicio.c:44:16: warning: too many arguments for format [-Wformat-extra-args]
+   44 |         printf("|%-10d      %10s      %$3.2f|\n", servicio.id, servicio.descripcion, servicio.precio);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Servicio.c: In function 'cargarServicioDescripcion':
+..\src\Servicio.c:73:60: error: invalid operands to binary != (have 'float' and 'void *')
+   73 |     if(vec != NULL && tam > 0 && descrip != NULL && precio != NULL){
+      |                                                            ^~
+..\src\Servicio.c:78:17: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   78 |                 strcpy( descrip, vec[i].descripcion);
+      |                 ^~~~~~
+..\src\Servicio.c:6:1: note: include '<string.h>' or provide a declaration of 'strcpy'
+    5 | #include "Servicio.h"
+  +++ |+#include <string.h>
+    6 | 
+..\src\Servicio.c:78:17: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+   78 |                 strcpy( descrip, vec[i].descripcion);
+      |                 ^~~~~~
+..\src\Servicio.c:78:17: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\Servicio.c:79:25: error: incompatible type for argument 1 of 'strcpy'
+   79 |                 strcpy( precio, vec[i].precio);
+      |                         ^~~~~~
+      |                         |
+      |                         float
+..\src\Servicio.c:79:25: note: expected 'char *' but argument is of type 'float'
+..\src\Servicio.c:79:39: error: incompatible type for argument 2 of 'strcpy'
+   79 |                 strcpy( precio, vec[i].precio);
+      |                                 ~~~~~~^~~~~~~
+      |                                       |
+      |                                       float
+..\src\Servicio.c:79:39: note: expected 'const char *' but argument is of type 'float'
+12:57:51 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:50:9: warning: implicit declaration of function 'inicializarTrabajo'; did you mean 'inicializarAutos'? [-Wimplicit-function-declaration]
+   50 |         inicializarTrabajo(listaTrabajos, TAM_TRAB);
+      |         ^~~~~~~~~~~~~~~~~~
+      |         inicializarAutos
+..\src\main.c:101:25: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+  101 |                         listarServicios(servicios, TAM_SERV);
+      |                         ^~~~~~~~~~~~~~~
+..\src\main.c:106:25: warning: implicit declaration of function 'altaTrabajo' [-Wimplicit-function-declaration]
+  106 |                         altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+      |                         ^~~~~~~~~~~
+..\src\main.c:111:25: warning: implicit declaration of function 'listarTrabajos'; did you mean 'listarMarcas'? [-Wimplicit-function-declaration]
+  111 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+      |                         listarMarcas
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:77:13: warning: implicit declaration of function 'strupr' [-Wimplicit-function-declaration]
+   77 |             strupr(idAutoAux);
+      |             ^~~~~~
+..\src\Trabajo.c:78:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   78 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:78:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:81:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   81 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:83:33: error: assignment to expression with array type
+   83 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:86:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   86 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:90:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   90 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:126:9: warning: implicit declaration of function 'cargarServicioDescripcion'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  126 |         cargarServicioDescripcion(servicios, tamS, trabajo.idServicio, descripServ, precioServ);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:129:21: warning: '0' flag used with '%s' gnu_printf format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                     ^
+..\src\Trabajo.c:129:21: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                 ~~~~^
+      |                     |
+      |                     char *
+      |                 %-02d
+  130 |                         trabajo.id,
+      |                         ~~~~~~~~~~
+      |                                |
+      |                                int
+..\src\Trabajo.c:129:58: warning: repeated '0' flag in format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                                                          ^
+..\src\Trabajo.c:129:59: warning: repeated '0' flag in format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                                                           ^
+12:59:17 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:77:13: warning: implicit declaration of function 'strupr' [-Wimplicit-function-declaration]
+   77 |             strupr(idAutoAux);
+      |             ^~~~~~
+..\src\Trabajo.c:78:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   78 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:78:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:81:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   81 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:83:33: error: assignment to expression with array type
+   83 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:86:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   86 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:90:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   90 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:126:9: warning: implicit declaration of function 'cargarServicioDescripcion'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  126 |         cargarServicioDescripcion(servicios, tamS, trabajo.idServicio, descripServ, precioServ);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:129:21: warning: '0' flag used with '%s' gnu_printf format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                     ^
+..\src\Trabajo.c:129:21: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                 ~~~~^
+      |                     |
+      |                     char *
+      |                 %-02d
+  130 |                         trabajo.id,
+      |                         ~~~~~~~~~~
+      |                                |
+      |                                int
+..\src\Trabajo.c:129:58: warning: repeated '0' flag in format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                                                          ^
+..\src\Trabajo.c:129:59: warning: repeated '0' flag in format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                                                           ^
+12:59:46 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+..\src\Servicio.c: In function 'cargarServicioDescripcion':
+..\src\Servicio.c:77:60: error: invalid operands to binary != (have 'float' and 'void *')
+   77 |     if(vec != NULL && tam > 0 && descrip != NULL && precio != NULL){
+      |                                                            ^~
+13:04:06 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:77:13: warning: implicit declaration of function 'strupr' [-Wimplicit-function-declaration]
+   77 |             strupr(idAutoAux);
+      |             ^~~~~~
+..\src\Trabajo.c:78:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   78 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:78:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:81:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   81 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:83:33: error: assignment to expression with array type
+   83 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:86:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   86 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:90:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   90 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:126:9: warning: implicit declaration of function 'cargarServicioDescripcion'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  126 |         cargarServicioDescripcion(servicios, tamS, trabajo.idServicio, descripServ, precioServ);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:129:21: warning: '0' flag used with '%s' gnu_printf format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                     ^
+..\src\Trabajo.c:129:21: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                 ~~~~^
+      |                     |
+      |                     char *
+      |                 %-02d
+  130 |                         trabajo.id,
+      |                         ~~~~~~~~~~
+      |                                |
+      |                                int
+..\src\Trabajo.c:129:58: warning: repeated '0' flag in format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                                                          ^
+..\src\Trabajo.c:129:59: warning: repeated '0' flag in format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%0002d           %10s       %.2f \n",
+      |                                                           ^
+13:06:15 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:77:13: warning: implicit declaration of function 'strupr' [-Wimplicit-function-declaration]
+   77 |             strupr(idAutoAux);
+      |             ^~~~~~
+..\src\Trabajo.c:78:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   78 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:78:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:81:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   81 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:83:33: error: assignment to expression with array type
+   83 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:86:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   86 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:90:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   90 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:126:9: warning: implicit declaration of function 'cargarServicioDescripcion'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  126 |         cargarServicioDescripcion(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:129:21: warning: '0' flag used with '%s' gnu_printf format [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                     ^
+..\src\Trabajo.c:129:21: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  129 |         printf("%-02s            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                 ~~~~^
+      |                     |
+      |                     char *
+      |                 %-02d
+  130 |                         trabajo.id,
+      |                         ~~~~~~~~~~
+      |                                |
+      |                                int
+13:06:52 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:77:13: warning: implicit declaration of function 'strupr' [-Wimplicit-function-declaration]
+   77 |             strupr(idAutoAux);
+      |             ^~~~~~
+..\src\Trabajo.c:78:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   78 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:78:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:81:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   81 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:83:33: error: assignment to expression with array type
+   83 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:86:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   86 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:90:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   90 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:126:9: warning: implicit declaration of function 'cargarServicioDescripcion'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  126 |         cargarServicioDescripcion(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:129:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  129 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:07:53 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:81:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   81 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:81:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:84:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   84 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:86:33: error: assignment to expression with array type
+   86 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:89:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   89 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:93:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   93 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:129:9: warning: implicit declaration of function 'cargarServicioDescripcion'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  129 |         cargarServicioDescripcion(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:132:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  132 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:08:36 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:81:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   81 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:81:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:84:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   84 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:86:33: error: assignment to expression with array type
+   86 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:89:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   89 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:93:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   93 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:129:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  129 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:132:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  132 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:10:18 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:81:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   81 |             while( !validarAuto(autos, tamA, idAutoAux)() )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:81:21: error: called object is not a function or function pointer
+..\src\Trabajo.c:84:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   84 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:86:33: error: assignment to expression with array type
+   86 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:89:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   89 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:93:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   93 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:129:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  129 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:132:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  132 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:13:04 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:81:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   81 |             while( !validarAuto(autos, tamA, idAutoAux) )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:84:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+   84 |                 scanf("%d", &idAutoAux);
+      |                        ~^   ~~~~~~~~~~
+      |                         |   |
+      |                         |   char (*)[8]
+      |                         int *
+..\src\Trabajo.c:86:33: error: assignment to expression with array type
+   86 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:89:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   89 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:93:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   93 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:129:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  129 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:132:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  132 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:14:14 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:81:21: warning: implicit declaration of function 'validarAuto'; did you mean 'altaAuto'? [-Wimplicit-function-declaration]
+   81 |             while( !validarAuto(autos, tamA, idAutoAux) )
+      |                     ^~~~~~~~~~~
+      |                     altaAuto
+..\src\Trabajo.c:87:33: error: assignment to expression with array type
+   87 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:90:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   90 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:94:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   94 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:130:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  130 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:15:10 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:87:33: error: assignment to expression with array type
+   87 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:90:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   90 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:94:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   94 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:130:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  130 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:17:08 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:87:33: error: assignment to expression with array type
+   87 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:90:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   90 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:94:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   94 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:130:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  130 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:17:15 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:50:9: warning: implicit declaration of function 'inicializarTrabajo'; did you mean 'inicializarAutos'? [-Wimplicit-function-declaration]
+   50 |         inicializarTrabajo(listaTrabajos, TAM_TRAB);
+      |         ^~~~~~~~~~~~~~~~~~
+      |         inicializarAutos
+..\src\main.c:101:25: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+  101 |                         listarServicios(servicios, TAM_SERV);
+      |                         ^~~~~~~~~~~~~~~
+..\src\main.c:106:25: warning: implicit declaration of function 'altaTrabajo' [-Wimplicit-function-declaration]
+  106 |                         altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+      |                         ^~~~~~~~~~~
+..\src\main.c:111:25: warning: implicit declaration of function 'listarTrabajos'; did you mean 'listarMarcas'? [-Wimplicit-function-declaration]
+  111 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+      |                         listarMarcas
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:87:33: error: assignment to expression with array type
+   87 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:90:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   90 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:94:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   94 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:130:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  130 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:20:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:87:33: error: assignment to expression with array type
+   87 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:90:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   90 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:94:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   94 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:130:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  130 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:21:29 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:87:33: error: assignment to expression with array type
+   87 |             nuevoTrabajo.idAuto = idAutoAux;
+      |                                 ^
+..\src\Trabajo.c:90:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   90 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:94:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   94 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:130:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  130 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:27:03 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:90:13: warning: implicit declaration of function 'listarServicios' [-Wimplicit-function-declaration]
+   90 |             listarServicios(servicios, tamS);
+      |             ^~~~~~~~~~~~~~~
+..\src\Trabajo.c:94:22: warning: implicit declaration of function 'validarServicio' [-Wimplicit-function-declaration]
+   94 |             while ( !validarServicio(servicios, tamS, idServicioAux))
+      |                      ^~~~~~~~~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:130:9: warning: implicit declaration of function 'cargarServDescrip'; did you mean 'cargarMarcaDescripcion'? [-Wimplicit-function-declaration]
+  130 |         cargarServDescrip(servicios, tamS, trabajo.idServicio, descripServ, &precioServ);
+      |         ^~~~~~~~~~~~~~~~~
+      |         cargarMarcaDescripcion
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:29:27 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:50:9: warning: implicit declaration of function 'inicializarTrabajo'; did you mean 'inicializarAutos'? [-Wimplicit-function-declaration]
+   50 |         inicializarTrabajo(listaTrabajos, TAM_TRAB);
+      |         ^~~~~~~~~~~~~~~~~~
+      |         inicializarAutos
+..\src\main.c:106:25: warning: implicit declaration of function 'altaTrabajo' [-Wimplicit-function-declaration]
+  106 |                         altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+      |                         ^~~~~~~~~~~
+..\src\main.c:111:25: warning: implicit declaration of function 'listarTrabajos'; did you mean 'listarMarcas'? [-Wimplicit-function-declaration]
+  111 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+      |                         listarMarcas
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:31:01 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+In file included from ..\src\Trabajo.c:12:
+..\src\Trabajo.h:24:48: error: unknown type name 'eAuto'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                                                ^~~~~
+In file included from ..\src\Auto.h:9,
+                 from ..\src\Trabajo.c:13:
+..\src\Trabajo.h:24:48: error: unknown type name 'eAuto'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                                                ^~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:33:09 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+In file included from ..\src\Trabajo.h:6,
+                 from ..\src\Auto.h:9,
+                 from ..\src\Auto.c:10:
+..\src\Auto.h:22:27: error: unknown type name 'eAuto'
+   22 | int ordenarAutosMarcaCaja(eAuto vec[], int tam);
+      |                           ^~~~~
+..\src\Auto.h:24:22: error: unknown type name 'eAuto'
+   24 | int inicializarAutos(eAuto vec[], int tam);
+      |                      ^~~~~
+..\src\Auto.h:26:17: error: unknown type name 'eAuto'
+   26 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                 ^~~~~
+..\src\Auto.h:28:18: error: unknown type name 'eAuto'
+   28 | void mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                  ^~~~~
+..\src\Auto.h:30:17: error: unknown type name 'eAuto'
+   30 | int listarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                 ^~~~~
+..\src\Auto.h:32:27: error: unknown type name 'eAuto'
+   32 | int buscarIndiceLibreAuto(eAuto autos[], int tam, int* pIndice);
+      |                           ^~~~~
+..\src\Auto.h:34:14: error: unknown type name 'eAuto'
+   34 | int altaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |              ^~~~~
+..\src\Auto.h:36:19: error: unknown type name 'eAuto'
+   36 | int modificarAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                   ^~~~~
+..\src\Auto.h:38:14: error: unknown type name 'eAuto'
+   38 | int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |              ^~~~~
+In file included from ..\src\Auto.h:9,
+                 from ..\src\Auto.c:10:
+..\src\Trabajo.h:24:48: error: unknown type name 'eAuto'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                                                ^~~~~
+13:33:24 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+In file included from ..\src\Auto.h:9,
+                 from ..\src\Trabajo.h:6,
+                 from ..\src\Trabajo.c:12:
+..\src\Trabajo.h:20:24: error: unknown type name 'eTrabajo'
+   20 | int inicializarTrabajo(eTrabajo vec[], int tam);
+      |                        ^~~~~~~~
+..\src\Trabajo.h:22:30: error: unknown type name 'eTrabajo'
+   22 | int buscarIndiceLibreTrabajo(eTrabajo trabajos[], int tam, int* pIndice);
+      |                              ^~~~~~~~
+..\src\Trabajo.h:24:17: error: unknown type name 'eTrabajo'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                 ^~~~~~~~
+..\src\Trabajo.h:24:48: error: unknown type name 'eAuto'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                                                ^~~~~
+..\src\Trabajo.h:28:21: error: unknown type name 'eTrabajo'
+   28 | void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamS);
+      |                     ^~~~~~~~
+..\src\Trabajo.h:30:20: error: unknown type name 'eTrabajo'
+   30 | int listarTrabajos(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS);
+      |                    ^~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:34:02 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+In file included from ..\src\Auto.h:9,
+                 from ..\src\Trabajo.h:6,
+                 from ..\src\Trabajo.c:12:
+..\src\Trabajo.h:20:24: error: unknown type name 'eTrabajo'
+   20 | int inicializarTrabajo(eTrabajo vec[], int tam);
+      |                        ^~~~~~~~
+..\src\Trabajo.h:22:30: error: unknown type name 'eTrabajo'
+   22 | int buscarIndiceLibreTrabajo(eTrabajo trabajos[], int tam, int* pIndice);
+      |                              ^~~~~~~~
+..\src\Trabajo.h:24:17: error: unknown type name 'eTrabajo'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                 ^~~~~~~~
+..\src\Trabajo.h:24:48: error: unknown type name 'eAuto'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                                                ^~~~~
+..\src\Trabajo.h:28:21: error: unknown type name 'eTrabajo'
+   28 | void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamS);
+      |                     ^~~~~~~~
+..\src\Trabajo.h:30:20: error: unknown type name 'eTrabajo'
+   30 | int listarTrabajos(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS);
+      |                    ^~~~~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:34:40 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:50:9: warning: implicit declaration of function 'inicializarTrabajo'; did you mean 'inicializarAutos'? [-Wimplicit-function-declaration]
+   50 |         inicializarTrabajo(listaTrabajos, TAM_TRAB);
+      |         ^~~~~~~~~~~~~~~~~~
+      |         inicializarAutos
+..\src\main.c:106:25: warning: implicit declaration of function 'altaTrabajo' [-Wimplicit-function-declaration]
+  106 |                         altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+      |                         ^~~~~~~~~~~
+..\src\main.c:111:25: warning: implicit declaration of function 'listarTrabajos'; did you mean 'listarMarcas'? [-Wimplicit-function-declaration]
+  111 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+      |                         listarMarcas
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+In file included from ..\src\Trabajo.h:6,
+                 from ..\src\Auto.h:9,
+                 from ..\src\Auto.c:10:
+..\src\Auto.h:22:27: error: unknown type name 'eAuto'
+   22 | int ordenarAutosMarcaCaja(eAuto vec[], int tam);
+      |                           ^~~~~
+..\src\Auto.h:24:22: error: unknown type name 'eAuto'
+   24 | int inicializarAutos(eAuto vec[], int tam);
+      |                      ^~~~~
+..\src\Auto.h:26:17: error: unknown type name 'eAuto'
+   26 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                 ^~~~~
+..\src\Auto.h:28:18: error: unknown type name 'eAuto'
+   28 | void mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                  ^~~~~
+..\src\Auto.h:30:17: error: unknown type name 'eAuto'
+   30 | int listarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                 ^~~~~
+..\src\Auto.h:32:27: error: unknown type name 'eAuto'
+   32 | int buscarIndiceLibreAuto(eAuto autos[], int tam, int* pIndice);
+      |                           ^~~~~
+..\src\Auto.h:34:14: error: unknown type name 'eAuto'
+   34 | int altaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |              ^~~~~
+..\src\Auto.h:36:19: error: unknown type name 'eAuto'
+   36 | int modificarAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                   ^~~~~
+..\src\Auto.h:38:14: error: unknown type name 'eAuto'
+   38 | int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |              ^~~~~
+13:34:59 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:47:9: warning: implicit declaration of function 'inicializarAutos' [-Wimplicit-function-declaration]
+   47 |         inicializarAutos(listaAutos, TAM_AUT);
+      |         ^~~~~~~~~~~~~~~~
+..\src\main.c:50:9: warning: implicit declaration of function 'inicializarTrabajo' [-Wimplicit-function-declaration]
+   50 |         inicializarTrabajo(listaTrabajos, TAM_TRAB);
+      |         ^~~~~~~~~~~~~~~~~~
+..\src\main.c:71:25: warning: implicit declaration of function 'altaAuto' [-Wimplicit-function-declaration]
+   71 |                         altaAuto(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                         ^~~~~~~~
+..\src\main.c:76:25: warning: implicit declaration of function 'modificarAuto' [-Wimplicit-function-declaration]
+   76 |                         modificarAuto(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                         ^~~~~~~~~~~~~
+..\src\main.c:81:25: warning: implicit declaration of function 'bajaAuto' [-Wimplicit-function-declaration]
+   81 |                         bajaAuto(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                         ^~~~~~~~
+..\src\main.c:86:25: warning: implicit declaration of function 'listarAutos' [-Wimplicit-function-declaration]
+   86 |                         listarAutos(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                         ^~~~~~~~~~~
+..\src\main.c:106:25: warning: implicit declaration of function 'altaTrabajo' [-Wimplicit-function-declaration]
+  106 |                         altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+      |                         ^~~~~~~~~~~
+..\src\main.c:111:25: warning: implicit declaration of function 'listarTrabajos'; did you mean 'listarMarcas'? [-Wimplicit-function-declaration]
+  111 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+      |                         listarMarcas
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'altaTrabajo':
+..\src\Trabajo.c:76:17: warning: implicit declaration of function 'listarAutos' [-Wimplicit-function-declaration]
+   76 |                 listarAutos(autos, tamA, marcas, tamM, colores, tamC);
+      |                 ^~~~~~~~~~~
+..\src\Trabajo.c:81:21: warning: implicit declaration of function 'validarAuto'; did you mean 'validarColor'? [-Wimplicit-function-declaration]
+   81 |             while( !validarAuto(autos, tamA, idAutoAux) )
+      |                     ^~~~~~~~~~~
+      |                     validarColor
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:39:13 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:50:9: warning: implicit declaration of function 'inicializarTrabajo'; did you mean 'inicializarAutos'? [-Wimplicit-function-declaration]
+   50 |         inicializarTrabajo(listaTrabajos, TAM_TRAB);
+      |         ^~~~~~~~~~~~~~~~~~
+      |         inicializarAutos
+..\src\main.c:106:25: warning: implicit declaration of function 'altaTrabajo' [-Wimplicit-function-declaration]
+  106 |                         altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+      |                         ^~~~~~~~~~~
+..\src\main.c:111:25: warning: implicit declaration of function 'listarTrabajos'; did you mean 'listarMarcas'? [-Wimplicit-function-declaration]
+  111 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+      |                         listarMarcas
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:41:49 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+In file included from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Menu.c:8:
+..\src\Trabajo.h:1:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    1 | #include <stdio.h>
+      |                   ^
+..\src\Trabajo.h:2:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    2 | #include <stdlib.h>
+      |                    ^
+..\src\Trabajo.h:3:18: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    3 | #include "Auto.h"
+      |                  ^
+..\src\Trabajo.h:24:48: error: unknown type name 'eAuto'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                                                ^~~~~
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:5,
+                 from ..\src\Menu.c:10:
+..\src\Auto.h:1:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    1 | #include "Color.h"
+      |                   ^
+..\src\Auto.h:2:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    2 | #include "Fecha.h"
+      |                   ^
+..\src\Auto.h:3:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    3 | #include "Marca.h"
+      |                   ^
+..\src\Auto.h:4:22: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    4 | #include "Servicio.h"
+      |                      ^
+..\src\Auto.h:5:21: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    5 | #include "Trabajo.h"
+      |                     ^
+13:42:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Auto.h:8,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:22:27: error: unknown type name 'eAuto'
+   22 | int ordenarAutosMarcaCaja(eAuto vec[], int tam);
+      |                           ^~~~~
+..\src\Auto.h:24:22: error: unknown type name 'eAuto'
+   24 | int inicializarAutos(eAuto vec[], int tam);
+      |                      ^~~~~
+..\src\Auto.h:26:18: error: unknown type name 'eAuto'
+   26 | void mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                  ^~~~~
+..\src\Auto.h:28:17: error: unknown type name 'eAuto'
+   28 | int listarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                 ^~~~~
+..\src\Auto.h:30:27: error: unknown type name 'eAuto'
+   30 | int buscarIndiceLibreAuto(eAuto autos[], int tam, int* pIndice);
+      |                           ^~~~~
+..\src\Auto.h:32:16: error: unknown type name 'eAuto'
+   32 | int buscarAuto(eAuto vec[], int tam, char id[], int* pIndice);
+      |                ^~~~~
+..\src\Auto.h:34:17: error: unknown type name 'eAuto'
+   34 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                 ^~~~~
+..\src\Auto.h:36:14: error: unknown type name 'eAuto'
+   36 | int altaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |              ^~~~~
+..\src\Auto.h:38:19: error: unknown type name 'eAuto'
+   38 | int modificarAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |                   ^~~~~
+..\src\Auto.h:40:14: error: unknown type name 'eAuto'
+   40 | int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+      |              ^~~~~
+In file included from ..\src\Auto.h:8,
+                 from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Trabajo.h:24:48: error: unknown type name 'eAuto'
+   24 | int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+      |                                                ^~~~~
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13:43:42 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+In file included from ..\src\main.c:10:
+..\src\Trabajo.h:25:33: error: unknown type name 'eServicio'
+   25 |                                 eServicio servicios[], int tamS, eMarca marcas[], int tamM,
+      |                                 ^~~~~~~~~
+..\src\Trabajo.h:29:39: error: unknown type name 'eServicio'
+   29 | void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamS);
+      |                                       ^~~~~~~~~
+..\src\Trabajo.h:31:51: error: unknown type name 'eServicio'
+   31 | int listarTrabajos(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS);
+      |                                                   ^~~~~~~~~
+..\src\main.c: In function 'main':
+..\src\main.c:107:25: warning: implicit declaration of function 'altaTrabajo' [-Wimplicit-function-declaration]
+  107 |                         altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+      |                         ^~~~~~~~~~~
+..\src\main.c:112:25: warning: implicit declaration of function 'listarTrabajos'; did you mean 'listarMarcas'? [-Wimplicit-function-declaration]
+  112 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+      |                         listarMarcas
+13:44:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:112:25: error: too few arguments to function 'listarTrabajos'
+  112 |                         listarTrabajos(listaTrabajos, TAM_TRAB);
+      |                         ^~~~~~~~~~~~~~
+In file included from ..\src\main.c:10:
+..\src\Trabajo.h:32:5: note: declared here
+   32 | int listarTrabajos(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS);
+      |     ^~~~~~~~~~~~~~
+13:45:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:133:16: warning: '0' flag ignored with '-' flag in gnu_printf format [-Wformat=]
+  133 |         printf("%-02d            %8s         %02d/%02d/%d           %10s       %.2f \n",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:46:29 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+Info: Nothing to build for main
+13:47:08 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:50:43 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:51:47 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:52:28 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+13:57:06 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:00:02 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+c:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file main.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:00:12 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:04:53 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:06:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:08:28 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:22:42 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Color.o" "..\\src\\Color.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Marca.o" "..\\src\\Marca.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:25:15 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Color.o" "..\\src\\Color.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Marca.o" "..\\src\\Marca.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:26:27 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:28:08 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:28:42 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:28:58 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:34:05 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:36:02 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'mostrarTrabajo':
+..\src\Trabajo.c:134:37: warning: '0' flag used with '%s' gnu_printf format [-Wformat=]
+  134 |         printf("%2d              %08s      %02d/%02d/%4d           %10s       %.2f \n",
+      |                                     ^
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:37:25 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:38:46 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:41:26 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:42:55 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:44:44 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:45:56 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:46:50 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:47:48 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:48:51 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+14:50:48 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+15:53:04 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'buscarTrabajo':
+..\src\Trabajo.c:58:45: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   58 |             if(!vec[i].isEmpty && (vec[i].id, id == 0) )
+      |                                             ^
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:222:17: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+  222 |         scanf("%d", &idAux);
+      |                ~^   ~~~~~~
+      |                 |   |
+      |                 |   char (*)[8]
+      |                 int *
+..\src\Trabajo.c:224:43: warning: passing argument 3 of 'buscarTrabajo' makes integer from pointer without a cast [-Wint-conversion]
+  224 |         if( buscarTrabajo(trabajos, tamT, idAux, &indice) )
+      |                                           ^~~~~
+      |                                           |
+      |                                           char *
+..\src\Trabajo.c:49:48: note: expected 'int' but argument is of type 'char *'
+   49 | int buscarTrabajo(eTrabajo vec[], int tam, int id, int* pIndice){
+      |                                            ~~~~^~
+..\src\Trabajo.c:235:32: warning: implicit declaration of function 'trabajo'; did you mean 'altaTrabajo'? [-Wimplicit-function-declaration]
+  235 |                 mostrarTrabajo(trabajo(indice), servicios, tamS);
+      |                                ^~~~~~~
+      |                                altaTrabajo
+..\src\Trabajo.c:235:32: error: incompatible type for argument 1 of 'mostrarTrabajo'
+  235 |                 mostrarTrabajo(trabajo(indice), servicios, tamS);
+      |                                ^~~~~~~~~~~~~~~
+      |                                |
+      |                                int
+..\src\Trabajo.c:145:30: note: expected 'eTrabajo' but argument is of type 'int'
+  145 | void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamS){
+      |                     ~~~~~~~~~^~~~~~~
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+15:54:57 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'buscarTrabajo':
+..\src\Trabajo.c:58:45: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   58 |             if(!vec[i].isEmpty && (vec[i].id, id == 0) )
+      |                                             ^
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:235:32: warning: implicit declaration of function 'trabajo'; did you mean 'altaTrabajo'? [-Wimplicit-function-declaration]
+  235 |                 mostrarTrabajo(trabajo(indice), servicios, tamS);
+      |                                ^~~~~~~
+      |                                altaTrabajo
+..\src\Trabajo.c:235:32: error: incompatible type for argument 1 of 'mostrarTrabajo'
+  235 |                 mostrarTrabajo(trabajo(indice), servicios, tamS);
+      |                                ^~~~~~~~~~~~~~~
+      |                                |
+      |                                int
+..\src\Trabajo.c:145:30: note: expected 'eTrabajo' but argument is of type 'int'
+  145 | void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamS){
+      |                     ~~~~~~~~~^~~~~~~
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+15:55:36 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'buscarTrabajo':
+..\src\Trabajo.c:58:45: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   58 |             if(!vec[i].isEmpty && (vec[i].id, id == 0) )
+      |                                             ^
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+15:56:03 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'buscarTrabajo':
+..\src\Trabajo.c:58:45: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   58 |             if(!vec[i].isEmpty && (vec[i].id, id == 0) )
+      |                                             ^
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+15:57:37 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'buscarTrabajo':
+..\src\Trabajo.c:58:44: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   58 |             if(!vec[i].isEmpty && vec[i].id, id == 0)
+      |                                            ^
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+15:58:03 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+15:59:08 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+15:59:33 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:58: warning: passing argument 3 of 'validarAuto' makes pointer from integer without a cast [-Wint-conversion]
+  245 |                         while( !validarAuto(autos, tamA, idAutoAux) )
+      |                                                          ^~~~~~~~~
+      |                                                          |
+      |                                                          int
+In file included from ..\src\Trabajo.h:3,
+                 from ..\src\Trabajo.c:12:
+..\src\Auto.h:32:44: note: expected 'char *' but argument is of type 'int'
+   32 | int validarAuto(eAuto vec[], int tam, char id[]);
+      |                                       ~~~~~^~~~
+..\src\Trabajo.c:250:49: error: assignment to expression with array type
+  250 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+16:04:32 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:239:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  239 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:245:33: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+  245 |                         scanf("%d", &idAutoAux);
+      |                                ~^   ~~~~~~~~~~
+      |                                 |   |
+      |                                 |   char (*)[8]
+      |                                 int *
+..\src\Trabajo.c:249:41: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'char (*)[8]' [-Wformat=]
+  249 |                                 scanf("%d", &idAutoAux);
+      |                                        ~^   ~~~~~~~~~~
+      |                                         |   |
+      |                                         |   char (*)[8]
+      |                                         int *
+..\src\Trabajo.c:251:49: error: assignment to expression with array type
+  251 |                         trabajos[indice].idAuto = idAutoAux;
+      |                                                 ^
+..\src\Trabajo.c:209:12: warning: unused variable 'fechaAux' [-Wunused-variable]
+  209 |     eFecha fechaAux;
+      |            ^~~~~~~~
+16:11:49 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:238:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  238 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+..\src\Trabajo.c:272:28: error: 'fechaAux' undeclared (first use in this function)
+  272 |                           &fechaAux.dia,
+      |                            ^~~~~~~~
+..\src\Trabajo.c:272:28: note: each undeclared identifier is reported only once for each function it appears in
+16:12:07 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:239:25: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  239 |                 switch( menuModifTrabajo() ){
+      |                         ^~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+16:12:44 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'modificarTrabajo':
+..\src\Trabajo.c:239:26: warning: implicit declaration of function 'menuModifTrabajo' [-Wimplicit-function-declaration]
+  239 |                 switch ( menuModifTrabajo() ){
+      |                          ^~~~~~~~~~~~~~~~
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+16:13:10 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+16:14:30 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:113:25: warning: implicit declaration of function 'modificarTrabajo'; did you mean 'mostrarTrabajo'? [-Wimplicit-function-declaration]
+  113 |                         modificarTrabajo(listaTrabajos, TAM_TRAB, servicios, TAM_SERV, autos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                         ^~~~~~~~~~~~~~~~
+      |                         mostrarTrabajo
+..\src\main.c:113:88: error: 'autos' undeclared (first use in this function)
+  113 |                         modificarTrabajo(listaTrabajos, TAM_TRAB, servicios, TAM_SERV, autos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                                                                                        ^~~~~
+..\src\main.c:113:88: note: each undeclared identifier is reported only once for each function it appears in
+16:14:55 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:113:25: warning: implicit declaration of function 'modificarTrabajo'; did you mean 'mostrarTrabajo'? [-Wimplicit-function-declaration]
+  113 |                         modificarTrabajo(listaTrabajos, TAM_TRAB, servicios, TAM_SERV, listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                         ^~~~~~~~~~~~~~~~
+      |                         mostrarTrabajo
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+16:15:46 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:113:25: warning: implicit declaration of function 'modificarTrabajo'; did you mean 'mostrarTrabajo'? [-Wimplicit-function-declaration]
+  113 |                         modificarTrabajo(listaTrabajos, TAM_TRAB, servicios, TAM_SERV, listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
+      |                         ^~~~~~~~~~~~~~~~
+      |                         mostrarTrabajo
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+16:17:21 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 

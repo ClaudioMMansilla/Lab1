@@ -1,12 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Color.h"
+#include "Marca.h"
 
 #ifndef AUTO_H_
 #define AUTO_H_
-
-#include "Color.h"
-#include "Fecha.h"
-#include "Marca.h"
-#include "Servicio.h"
-#include "Trabajo.h"
 
 typedef struct{
 	char id[8];
@@ -28,6 +26,10 @@ void mostrarAuto(eAuto a, eMarca marcas[], int tamM, eColor colores[], int tamC)
 int listarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
 
 int buscarIndiceLibreAuto(eAuto autos[], int tam, int* pIndice);
+
+int buscarAuto(eAuto vec[], int tam, char id[], int* pIndice);
+
+int validarAuto(eAuto vec[], int tam, char id[]);
 
 int altaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
 

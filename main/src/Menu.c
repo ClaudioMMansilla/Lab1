@@ -8,6 +8,7 @@
 #include "Trabajo.h"
 #include "Servicio.h"
 #include "Auto.h"
+#include "Menu.h"
 
 
 char menuPrincipal(){
@@ -25,6 +26,7 @@ char menuPrincipal(){
     printf("G. LISTAR SERVICIOS\n");
     printf("H. ALTA TRABAJO:\n");
     printf("I. LISTAR TRABAJOS\n");
+    printf("\n");
     printf("Z. Salir\n\n");
     printf("Ingrese opcion: ");
     fflush(stdin);
@@ -43,6 +45,22 @@ int menuModifAuto(){
     printf("\n     *** Campo a modificar *** \n");
     printf("1. Marca\n");
     printf("2. Color\n");
+    printf("Ingrese opcion: ");
+    fflush(stdin);
+    scanf("%d", &opcion);
+
+    return opcion;
+}
+
+
+int menuModifTrabajo(){
+
+    int opcion;
+
+    printf("\n     *** Campo a modificar *** \n");
+    printf("1. Patente auto\n");
+    printf("2. Servicio\n");
+    printf("3. Fecha\n");
     printf("Ingrese opcion: ");
     fflush(stdin);
     scanf("%d", &opcion);

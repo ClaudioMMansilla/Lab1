@@ -26,9 +26,11 @@ int listarMarcas(eMarca vec[], int tam){
     	for(int i = 0; i < tam; i++){
     		mostrarMarca(vec[i]);
     	}
+
         printf("______________________________________\n\n");
-//    	system("pause");
+
     	control = 1;
+//    	system("pause");
     }
     return control;
 }

@@ -1,1 +1,9 @@
-Info: Nothing to build for main
+16:17:21 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+
+16:17:22 Build Finished. 0 errors, 0 warnings. (took 1s.161ms)
+

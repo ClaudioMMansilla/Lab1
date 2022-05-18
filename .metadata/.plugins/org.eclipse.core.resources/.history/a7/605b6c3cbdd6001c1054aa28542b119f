@@ -1,0 +1,169 @@
+// Mansilla Claudio Matias - clau.mmatt@gmail.com
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Color.h"
+#include "Fecha.h"
+#include "Marca.h"
+#include "Servicio.h"
+#include "Trabajo.h"
+#include "Auto.h"
+
+
+int inicializarTrabajo(eTrabajo vec[], int tam){
+    int control = 0;
+    if( vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam; i++)
+        {
+        	vec[i].isEmpty = 1;
+        }
+        control = 1;
+    }
+    return control;
+}
+
+int buscarIndiceLibreTrabajo(eTrabajo trabajos[], int tam, int* pIndice){
+
+    int control = 0;
+    if( trabajos != NULL && pIndice != NULL && tam > 0)
+    {
+        *pIndice = -1;
+        for(int i=0; i < tam; i++)
+        {
+            if(trabajos[i].isEmpty) // busca en el array de estructuras algun indice libre
+            {
+                *pIndice = i;
+                break;
+            }
+        }
+        control = 1;
+    }
+    return control;
+}
+
+
+void mostrarTrabajo(eTrabajo trabajo, eAuto autos[], tamA, eServicio servicios[], int tamS, eFecha fecha ){
+// recibe 1 solo vector por cada llamado
+
+	char idAutosAux[8];
+	int idServicioAux;
+
+	cargarMarcaDescripcion(marcas, tamM, a.idMarca, descrip);
+	cargarNombreColor(colores, tamC, a.idColor, color);
+
+
+	printf("%-7s            %c       %9s       %6s \n",
+			a.id,
+			a.caja,
+			descrip,
+			color
+		);
+}
+
+int listarAutos(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC){
+
+	int control = 0;
+	int flagEmpty = 1;
+
+    if( autos != NULL && tamA > 0 && marcas != NULL && tamM > 0 && colores != NULL && tamC > 0)
+    {
+    	system("cls");
+    	printf(" ** Listado de vehiculos registrados ** \n");
+    	printf("--------------------------------------------------\n");
+    	printf("id (patente)   Tipo Caja       Marca        Color \n");
+    	printf("--------------------------------------------------\n");
+
+        for(int i=0; i < tamA; i++)
+        {
+            if( !autos[i].isEmpty)
+            {
+                mostrarAuto(autos[i], marcas, tamM, colores, tamC);
+                flagEmpty = 0;
+            }
+        }
+
+        if(flagEmpty)
+        {
+            printf(" No hay vehiculos registrados en el sistema\n");
+        }
+    	control = 1;
+    }
+    return control;
+}
+
+
+//H. ALTA TRABAJO: Se dará de alta cada ocurrencia de trabajo pidiéndole al usuario que elija un auto y un
+//Servicio
+int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+				eServicio servicios[], int tamS, eFecha fecha[],
+				eMarca marcas[], int tamM, eColor colores[], int tamC, int* pProximoId ){
+
+	int control = 0;
+    int indice;
+    char idAutoAux[8];
+    int idServicioAux;
+    eFecha fechaAux;
+
+    eTrabajo nuevoTrabajo;
+
+    if( trabajos != NULL && autos != NULL && servicios != NULL
+    		&& fecha != NULL && tamT > 0 && tamA > 0 && tamS > 0 && pProximoId != NULL)
+    {
+        system("cls");
+        printf("    *** Alta de nuevo trabajo ***\n\n");
+        buscarIndiceLibreTrabajo(trabajos, tamT, &indice);
+
+        if(indice == -1)
+        {
+            printf("No hay lugar en el sistema\n");
+        }
+        else
+        {
+        	listarAutos(autos, tamA, marcas, tamM, colores, tamC);
+            printf("Ingrese el ID del auto: \n");
+            fflush(stdin);
+            gets(idAutoAux);
+            strupr(idAutoAux);
+            while( !validarAuto(autos, tamA, idAutoAux)() )
+            {
+                printf("Id invalido. Reingrese ID del auto: \n");
+                scanf("%d", &idAutoAux);
+            }
+            nuevoTrabajo.idAuto = idAutoAux;
+
+
+            listarServicios(servicios, tamS);
+            printf("Ingrese el ID del servicio: \n\n");
+            fflush(stdin);
+            scanf("%d",&idServicioAux);
+            while ( !validarServicio(servicios, tamS, idServicioAux))
+            {
+                printf("Id invalido. Reingrese ID del servicio: \n");
+                scanf("%d",&idServicioAux);
+            }
+            nuevoTrabajo.idServicio = idServicioAux;
+
+
+            printf("Ingrese fecha de realizacion del trabajo dd/mm/aaaa: ");
+            scanf("%02d/%02d/%0002d",
+                  &fechaAux.dia,
+                  &fechaAux.mes,
+                  &fechaAux.anio);
+
+            // si todos los pasos anteriores estan ok
+            nuevoTrabajo.isEmpty = 0;
+            nuevoTrabajo.id = *pProximoId;
+            trabajos[indice] = nuevoTrabajo;
+            (*pProximoId)++;
+            control = 1;
+
+            printf("Alta de trabajo realizado correctamente \n\n");
+            system("pause");
+        }
+    }
+    return control;
+
+}
+
+

@@ -25,8 +25,9 @@ int listarColores(eColor vec[], int tam){
     		mostrarColor(vec[i]);
     	}
         printf("______________________________________\n\n");
-//    	system("pause");
+
     	control = 1;
+//    	system("pause");
     }
     return control;
 }

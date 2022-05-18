@@ -2,16 +2,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "Menu.h"
+
 #include "Color.h"
 #include "Fecha.h"
 #include "Marca.h"
 #include "Trabajo.h"
 #include "Servicio.h"
 #include "Auto.h"
+#include "Menu.h"
 
 #define TAM_AUT 10
-#define TAM_LAV 10
+#define TAM_TRAB 10
 #define TAM_MAR 5
 #define TAM_COL 5
 #define TAM_SERV 4
@@ -46,10 +47,11 @@ int main(void) {
 	eAuto listaAutos[TAM_AUT];
 	inicializarAutos(listaAutos, TAM_AUT);
 
-	eTrabajo listaTrab[TAM_LAV];
+	eTrabajo listaTrabajos[TAM_TRAB];
+	inicializarTrabajo(listaTrabajos, TAM_TRAB);
 
 	char opcion;
-	int idInicialTrab = 0;
+	int idInicialTrab = 1;
 
 	eAuto hardAutos[5]= {
 			{"AA420AR", 1000, 5000, 'm', 0},
@@ -62,23 +64,22 @@ int main(void) {
 		listaAutos[i] = hardAutos[i];
 	}
 
+
+
 	do
 	{
 		switch(menuPrincipal()){
 
 		case 'A':
 			altaAuto(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
-			system("pause");
 			break;
 
 		case 'B':
 			modificarAuto(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
-			system("pause");
 			break;
 
 		case 'C':
 			bajaAuto(listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
-			system("pause");
 			break;
 
 		case 'D':
@@ -93,6 +94,25 @@ int main(void) {
 
 		case 'F':
 			listarColores(colores, TAM_COL);
+			system("pause");
+			break;
+
+		case 'G':
+			listarServicios(servicios, TAM_SERV);
+			system("pause");
+			break;
+
+		case 'H':
+			altaTrabajo(listaTrabajos, TAM_TRAB, listaAutos, TAM_AUT, servicios, TAM_SERV, marcas, TAM_MAR, colores, TAM_COL, &idInicialTrab);
+			break;
+
+		case 'I':
+			listarTrabajos(listaTrabajos, TAM_TRAB, servicios, TAM_SERV);
+			system("pause");
+			break;
+
+		case 'J':
+			modificarTrabajo(listaTrabajos, TAM_TRAB, servicios, TAM_SERV, listaAutos, TAM_AUT, marcas, TAM_MAR, colores, TAM_COL);
 			system("pause");
 			break;
 

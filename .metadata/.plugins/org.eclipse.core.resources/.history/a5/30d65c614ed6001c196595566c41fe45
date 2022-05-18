@@ -1,0 +1,44 @@
+// Mansilla Claudio Matias - clau.mmatt@gmail.com
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Servicio.h"
+
+void mostrar(eColor color){
+// recibe 1 solo vector por cada llamado
+	printf("|%d            %10s| \n", color.id, color.nombreColor);
+}
+
+
+
+int buscarColor(eColor colores[], int tam, int id, int* pIndice){
+
+    int control = 0;
+    if( colores != NULL && pIndice != NULL && tam > 0 )
+    {
+        *pIndice = -1;
+        for(int i=0; i < tam; i++)
+        {
+            if(colores[i].id == id)
+            {
+                *pIndice = i;
+                break;
+            }
+        }
+        control = 1;
+    }
+    return control;
+}
+
+
+int validarColor(eColor vec[], int tam, int id){
+	int validacion = 0;
+	int indice;
+
+	if (buscarColor(vec, tam, id, &indice) ){
+		if(indice != -1){
+			validacion = 1;
+		}
+	}
+	return validacion;
+}
