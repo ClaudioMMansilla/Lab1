@@ -74,18 +74,17 @@ int listarServicios(eServicio servicio[], int tam){
 
 int cargarServDescrip(eServicio vec[], int tam, int id, char descrip[], float* pPrecio){
 
-    int control = 0;
-    if( vec != NULL && tam > 0 && descrip != NULL && pPrecio != NULL){
+	int control = 0;
+	if( vec != NULL && tam > 0 && descrip != NULL && pPrecio != NULL){
 
-         for(int i= 0; i < tam; i++){
-
-            if( vec[i].id == id){
-                strcpy( descrip, vec[i].descripcion);
-                *pPrecio = vec[i].precio;
-                control = 1;
-                break;
-            }
-         }
-    }
+		for(int i= 0; i < tam; i++){
+			if( vec[i].id == id){
+				strcpy( descrip, vec[i].descripcion);
+				*pPrecio = vec[i].precio;
+				control = 1;
+				break;
+			}
+		}
+	}
     return control;
 }

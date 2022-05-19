@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "Color.h"
+#include "Fecha.h"
+#include "Marca.h"
+#include "Trabajo.h"
+#include "Servicio.h"
+#include "Auto.h"
+#include "Menu.h"
+
+
+int informeTrabajosPorServicio(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS, int idBuscado){
+
+	int control = 0;
+
+    float acumTrabajos = 0;
+    int contadorTrabajos = 0;
+    float promedio = 0;
+
+    if( trabajos != NULL && tamT > 0)
+    {
+    	for(int i=0; i < tamT; i++)
+    	{
+    		if( !trabajos[i].isEmpty && trabajos[i].idServicio == idBuscado)
+    		{
+    			acumTrabajos += servicios[j].precio;
+
+    			for(int j=0; j < tamS; j++){
+
+    				acumTrabajos += servicios[j].precio;
+    				contadorTrabajos++;
+    			}
+    		}
+    	}
+        if(contadorTrabajos != 0)
+        {
+            promedio = acumSueldo / contEmpleados;
+        }
+
+        system("cls");
+        printf("     *** Promedio de Sueldos ***\n\n");
+
+        printf("Promedio Sueldos: $ %.2f\n\n", promedio);
+        control = 1;
+    }
+    return control;
+}

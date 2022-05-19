@@ -366,3 +366,117 @@ int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[
 }
 
 
+
+int buscarAutoColor(eAuto autos[], int tamA, eColor color[], int tamC, int id, int* pIndice){
+
+    int control = 0;
+
+    if( autos != NULL && tamA > 0 && autos != NULL && tamA > 0 && pIndice != NULL ){
+
+        *pIndice = -1;
+
+        for(int i=0; i < tamA; i++)
+        {
+            if(!autos[i].isEmpty && autos[i].idColor == id){
+                *pIndice = i;
+                control = 1;
+                break;
+            }
+        }
+    }
+    return control;
+}
+
+
+int listarAutosIdColor(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC){
+
+	int control = 0;
+	int flagEmpty = 1;
+	int autoColor;
+
+    if( autos != NULL && tamA > 0 && marcas != NULL && tamM > 0 && colores != NULL && tamC > 0)
+    {
+    	system("cls");
+       	listarColores(colores, tamC);
+        printf("Color del auto: (ingrese el codigo que corresponda)\n");
+        scanf("%d", &autoColor);
+        while( !validarColor(colores,tamC, autoColor) )
+        {
+            printf("Id invalido. Reingrese id color: \n");
+            scanf("%d", &autoColor);
+        }
+
+
+    	system("cls");
+    	printf(" ** Listado de vehiculos registrados ** \n");
+    	printf("--------------------------------------------------\n");
+    	printf("id (patente)   Tipo Caja       Marca        Color \n");
+    	printf("--------------------------------------------------\n");
+
+        for(int i=0; i < tamA; i++)
+        {
+            if( !autos[i].isEmpty && autos[i].idColor == autoColor)
+            {
+                mostrarAuto(autos[i], marcas, tamM, colores, tamC);
+                flagEmpty = 0;
+            }
+        }
+
+        if(flagEmpty)
+        {
+            printf(" No hay vehiculos registrados en el sistema\n");
+        }
+
+        printf("__________________________________________________\n\n");
+    	control = 1;
+//    	system("pause");
+    }
+    return control;
+}
+
+
+int listarAutosIdMarca(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC){
+
+	int control = 0;
+	int flagEmpty = 1;
+	int autoMarca;
+
+    if( autos != NULL && tamA > 0 && marcas != NULL && tamM > 0 && colores != NULL && tamC > 0)
+    {
+    	system("cls");
+       	listarMarcas(marcas, tamM);
+        printf("Fabricante: (ingrese el codigo que corresponda)\n");
+        scanf("%d", &autoMarca);
+        while( !validarMarca(marcas, tamM, autoMarca) )
+        {
+            printf("Id invalido. Reintente nuevamente: \n");
+            scanf("%d", &autoMarca);
+        }
+
+
+    	system("cls");
+    	printf(" ** Listado de vehiculos registrados ** \n");
+    	printf("--------------------------------------------------\n");
+    	printf("id (patente)   Tipo Caja       Marca        Color \n");
+    	printf("--------------------------------------------------\n");
+
+        for(int i=0; i < tamA; i++)
+        {
+            if( !autos[i].isEmpty && autos[i].idMarca == autoMarca)
+            {
+                mostrarAuto(autos[i], marcas, tamM, colores, tamC);
+                flagEmpty = 0;
+            }
+        }
+
+        if(flagEmpty)
+        {
+            printf(" No hay vehiculos registrados en el sistema\n");
+        }
+
+        printf("__________________________________________________\n\n");
+    	control = 1;
+//    	system("pause");
+    }
+    return control;
+}

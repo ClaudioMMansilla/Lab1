@@ -8123,3 +8123,246 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c"
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
 gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+18:25:47 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+18:26:53 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\main.o" 
+18:43:12 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+..\src\informes.c: In function 'promedioTrabajosPorId':
+..\src\informes.c:27:37: error: 'eTrabajo' has no member named 'sueldo'
+   27 |                 acumSueldo += vec[i].sueldo;
+      |                                     ^
+19:46:15 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Servicio.o" "..\\src\\Servicio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:131:25: warning: implicit declaration of function 'informeIngresosPorServicio' [-Wimplicit-function-declaration]
+  131 |                         informeIngresosPorServicio(listaTrabajos, TAM_TRAB, servicios, TAM_SERV);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+..\src\informes.c: In function 'informeIngresosPorServicio':
+..\src\informes.c:19:11: warning: unused variable 'acumServicios' [-Wunused-variable]
+   19 |     float acumServicios = 0;
+      |           ^~~~~~~~~~~~~
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+19:50:37 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+19:53:04 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+19:53:53 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:131:25: warning: implicit declaration of function 'informeIngresosPorServicio' [-Wimplicit-function-declaration]
+  131 |                         informeIngresosPorServicio(listaTrabajos, TAM_TRAB, servicios, TAM_SERV);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+Info: Nothing to build for main
+19:55:15 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:131:25: warning: implicit declaration of function 'informeIngresosPorServicio' [-Wimplicit-function-declaration]
+  131 |                         informeIngresosPorServicio(listaTrabajos, TAM_TRAB, servicios, TAM_SERV);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+19:55:50 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+19:57:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+19:58:17 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+19:58:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:01:56 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+..\src\informes.c: In function 'informeIngresosPorServicio':
+..\src\informes.c:58:40: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+   58 |         printf("Trabajos registrados: %d  || Ingresos $ %.2f\n\n", contTrabajos, importeTotal);
+      |                                       ~^                           ~~~~~~~~~~~~
+      |                                        |                           |
+      |                                        int                         double
+      |                                       %f
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:02:27 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:20:58 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:25:42 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'ordenarTrabajosPorFecha':
+..\src\Trabajo.c:336:43: error: invalid operands to binary > (have 'eFecha' and 'eFecha')
+  336 |                 if( (vec[i].fechaServicio > vec[j].fechaServicio) )
+      |                      ~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~
+      |                            |                      |
+      |                            eFecha                 eFecha
+20:26:11 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'ordenarTrabajosPorFecha':
+..\src\Trabajo.c:336:43: error: invalid operands to binary == (have 'eFecha' and 'eFecha')
+  336 |                 if( (vec[i].fechaServicio == vec[j].fechaServicio) )
+      |                      ~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~~~~~~~~~~~~~
+      |                            |                       |
+      |                            eFecha                  eFecha
+20:27:23 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+..\src\Trabajo.c: In function 'ordenarTrabajosPorFecha':
+..\src\Trabajo.c:336:77: error: expected ')' before '{' token
+  336 |                 if( (vec[i].fechaServicio.anio > vec[j].fechaServicio.anio )
+      |                   ~                                                         ^
+      |                                                                             )
+  337 |                 {
+      |                 ~                                                            
+..\src\Trabajo.c:342:13: error: expected expression before '}' token
+  342 |             }
+      |             ^
+..\src\Trabajo.c:328:14: warning: unused variable 'vecAux' [-Wunused-variable]
+  328 |     eTrabajo vecAux;
+      |              ^~~~~~
+20:27:57 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:30:00 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:30:50 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:32:29 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:57:09 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:138:32: warning: implicit declaration of function 'menuInformes' [-Wimplicit-function-declaration]
+  138 |                         switch(menuInformes()){
+      |                                ^~~~~~~~~~~~
+..\src\main.c:147:40: warning: implicit declaration of function 'menuOrdenamiento' [-Wimplicit-function-declaration]
+  147 |                                 switch(menuOrdenamiento()){
+      |                                        ^~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:58:14 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+20:59:25 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+21:01:31 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+21:04:05 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+21:05:13 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+c:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file main.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:05:20 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+21:06:14 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+21:07:11 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+22:15:44 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+..\src\Auto.c: In function 'buscarAutoColor':
+..\src\Auto.c:374:70: warning: comparison between pointer and integer
+  374 |     if( autos != NULL && tamA > 0 && autos != NULL && tamA > 0 && id != NULL && pIndice != NULL ){
+      |                                                                      ^~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+22:16:22 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+22:18:01 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+22:18:57 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+22:25:14 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Auto.o" "..\\src\\Auto.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+23:06:41 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 
+23:17:44 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo.o" "..\\src\\Trabajo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o main.exe "src\\Auto.o" "src\\Color.o" "src\\Fecha.o" "src\\Marca.o" "src\\Menu.o" "src\\Servicio.o" "src\\Trabajo.o" "src\\informes.o" "src\\main.o" 

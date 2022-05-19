@@ -35,3 +35,15 @@ int buscarTrabajo(eTrabajo vec[], int tam, int id, int* pIndice);
 
 int modificarTrabajo(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS,
 					eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+
+int ordenarTrabajosPorServicio(eTrabajo vec[], int tam);
+
+int ordenarTrabajosPorFecha(eTrabajo vec[], int tam);
+
+int listarTrabajosPorIdAuto(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+		eServicio servicios[], int tamS, eMarca marcas[], int tamM,
+		eColor colores[], int tamC);
+
+int listarTrabajosPorFechaExacta(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS);
+
+

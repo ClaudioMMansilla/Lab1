@@ -26,6 +26,8 @@ char menuPrincipal(){
     printf("G. LISTAR SERVICIOS\n");
     printf("H. ALTA TRABAJO:\n");
     printf("I. LISTAR TRABAJOS\n");
+    printf("X. MENU DE INFORMES\n");
+    printf("Y. OPCIONES DE ORDENAMIENTO DE DATOS\n");
     printf("\n");
     printf("Z. Salir\n\n");
     printf("Ingrese opcion: ");
@@ -67,3 +69,40 @@ int menuModifTrabajo(){
 
     return opcion;
 }
+
+
+int menuInformes(){
+
+    int opcion;
+
+    system("cls");
+    printf("\n     *** Informes Varios *** \n");
+    printf("1. Ingresos por tipo de servicio\n"); // informeIngresosPorServicio()
+    printf("2. Listar autos por color\n"); // listarAutosIdColor()
+    printf("3. Listar autos por marca\n"); // int listarAutosIdMarca()
+    printf("4. Listar trabajos por auto\n");// listarTrabajosPorIdAuto()
+    printf("5. Buscar trabajos por fecha\n");// listarTrabajosPorFechaExacta()
+    printf("\nIngrese opcion: ");
+    fflush(stdin);
+    scanf("%d", &opcion);
+
+    return opcion;
+}
+
+
+int menuOrdenamiento(){
+
+    int opcion;
+
+    system("cls");
+    printf("\n     *** Menu de ordenamiento de datos *** \n");
+    printf("1. Ordenar trabajos por tipo de servicio\n"); // ordenarTrabajosPorServicio(listaTrabajos, TAM_TRAB);
+    printf("2. Ordenar trabajos por fecha\n"); // ordenarTrabajosPorFecha(listaTrabajos, TAM_TRAB);
+
+    printf("\nIngrese opcion: ");
+    fflush(stdin);
+    scanf("%d", &opcion);
+
+    return opcion;
+}
+

@@ -11,3 +11,7 @@ char menuPrincipal();
 int menuModifAuto();
 
 int menuModifTrabajo();
+
+int menuInformes();
+
+int menuOrdenamiento();

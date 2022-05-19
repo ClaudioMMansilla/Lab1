@@ -36,3 +36,9 @@ int altaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[
 int modificarAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
 
 int bajaAuto(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+
+int buscarAutoColor(eAuto autos[], int tamA, eColor color[], int tamC, int id, int* pIndice);
+
+int listarAutosIdColor(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);
+
+int listarAutosIdMarca(eAuto autos[], int tamA, eMarca marcas[], int tamM, eColor colores[], int tamC);

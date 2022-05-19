@@ -124,7 +124,7 @@ int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
             scanf("%d/%d/%d",
                   &fechaAux.dia,
                   &fechaAux.mes,
-                  &fechaAux.anio);;
+                  &fechaAux.anio);
             nuevoTrabajo.fechaServicio = fechaAux;
 
             // si todos los pasos anteriores estan ok
@@ -296,5 +296,156 @@ int modificarTrabajo(eTrabajo trabajos[], int tamT, eServicio servicios[], int t
 }
 
 
+int ordenarTrabajosPorServicio(eTrabajo vec[], int tam){
+
+    int control = 0;
+    eTrabajo vecAux;
+
+    if( vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam - 1; i++)
+        {
+            for(int j= i+1; j < tam; j++)
+            {
+                if( (vec[i].idServicio < vec[j].idServicio) )
+                {
+                	vecAux = vec[i];
+                    vec[i] = vec[j];
+                    vec[j] = vecAux;
+                }
+            }
+        }
+        printf("\nOrdenamiento efectuado correctamente\n\n");
+        control = 1;
+    }
+    return control;
+}
 
 
+int ordenarTrabajosPorFecha(eTrabajo vec[], int tam){
+
+    int control = 0;
+    eTrabajo vecAux;
+
+    if( vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam - 1; i++)
+        {
+            for(int j= i+1; j < tam; j++)
+            {
+                if( vec[i].fechaServicio.anio > vec[j].fechaServicio.anio
+                		|| vec[i].fechaServicio.mes > vec[j].fechaServicio.mes
+						|| vec[i].fechaServicio.dia > vec[j].fechaServicio.dia
+					)
+                {
+                	vecAux = vec[i];
+                    vec[i] = vec[j];
+                    vec[j] = vecAux;
+                }
+            }
+        }
+        printf("\nOrdenamiento efectuado correctamente\n\n");
+        control = 1;
+    }
+    return control;
+}
+
+
+int listarTrabajosPorIdAuto(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA,
+		eServicio servicios[], int tamS, eMarca marcas[], int tamM,
+		eColor colores[], int tamC){
+
+	int control = 0;
+	int flagEmpty = 1;
+	char autoId[8];
+
+    if( trabajos != NULL && tamT > 0 && servicios != NULL && tamS > 0
+    		&& autos != NULL && tamA > 0 && marcas != NULL && tamM > 0)
+    {
+    	system("cls");
+       	listarAutos(autos, tamA, marcas, tamM, colores, tamC);
+        printf("Ingrese id de auto para buscar en registros de trabajos realizados)\n");
+        fflush(stdin);
+        gets(autoId);
+        while( !validarAuto(autos, tamA, autoId) )
+        {
+            printf("Id invalido. Reintente nuevamente: \n");
+            fflush(stdin);
+            gets(autoId);
+        }
+
+
+    	system("cls");
+    	printf(" 		** Listado de trabajos registrados ** \n");
+    	printf("-------------------------------------------------------------------\n");
+    	printf(" id    Auto (patente)     Fecha Trabajo       Servicio     Precio \n");
+    	printf("-------------------------------------------------------------------\n");
+//    	printf("%2d          %8s       %02d/%02d/%4d              %10s       %.2f \n",
+
+        for(int i=0; i < tamT; i++)
+        {
+            if( !trabajos[i].isEmpty && ( strcmp(trabajos[i].idAuto, autoId) == 0))
+            {
+                mostrarTrabajo(trabajos[i], servicios, tamS);
+                flagEmpty = 0;
+            }
+        }
+
+        if(flagEmpty)
+        {
+            printf(" No hay trabajos registrados en el sistema\n");
+        }
+        printf("_____________________________________________________________________\n");
+    	control = 1;
+//    	system("pause");
+    }
+    return control;
+}
+
+
+
+int listarTrabajosPorFechaExacta(eTrabajo trabajos[], int tamT, eServicio servicios[], int tamS){
+
+	int control = 0;
+	int flagEmpty = 1;
+
+	eFecha trabajoFecha;
+
+    if( trabajos != NULL && tamT > 0 && servicios != NULL && tamS > 0 )
+    {
+    	system("cls");
+        printf("Ingrese fecha para buscar trabajos dd/mm/aaaa: ");
+        scanf("%d/%d/%d",
+              &trabajoFecha.dia,
+              &trabajoFecha.mes,
+              &trabajoFecha.anio);
+
+    	system("cls");
+    	printf(" 		** Listado de trabajos registrados ** \n");
+    	printf("-------------------------------------------------------------------\n");
+    	printf(" id    Auto (patente)     Fecha Trabajo       Servicio     Precio \n");
+    	printf("-------------------------------------------------------------------\n");
+
+        for(int i=0; i < tamT; i++)
+        {
+            if( !trabajos[i].isEmpty
+            		&& trabajos[i].fechaServicio.anio == trabajoFecha.anio
+            		&& trabajos[i].fechaServicio.mes == trabajoFecha.mes
+					&& trabajos[i].fechaServicio.dia == trabajoFecha.dia)
+            {
+                mostrarTrabajo(trabajos[i], servicios, tamS);
+                flagEmpty = 0;
+            }
+        }
+
+        if(flagEmpty)
+        {
+            printf(" No hay trabajos registrados en el sistema\n");
+        }
+        printf("_____________________________________________________________________\n");
+    	control = 1;
+//    	system("pause");
+
+    }
+    return control;
+}

@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "Color.h"
+#include "Fecha.h"
+#include "Marca.h"
+#include "Trabajo.h"
+#include "Servicio.h"
+#include "Auto.h"
+#include "Menu.h"
+
+
+int promedioTrabajosPorId(eTrabajo vec[], int tam){
+
+	int control = 0;
+
+    float acumSueldo = 0;
+    int contEmpleados = 0;
+    float promedio = 0;
+
+    if( vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam; i++)
+        {
+            if( !vec[i].isEmpty)
+            {
+                acumSueldo += vec[i].sueldo;
+                contEmpleados++;
+            }
+        }
+        if(contEmpleados != 0)
+        {
+            promedio = acumSueldo / contEmpleados;
+        }
+
+        system("cls");
+        printf("     *** Promedio de Sueldos ***\n\n");
+
+        printf("Promedio Sueldos: $ %.2f\n\n", promedio);
+        control = 1;
+    }
+    return control;
+}
